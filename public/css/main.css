@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+:root{
+    --background-main: #F4EEA9;
+    --background-extra: #F0BB62;
+    --primary: #064635;
+    --secondary: #519259;
+}
+
+body{
+    font-size: 1.6rem;
+    padding: 4rem;
+    background: var(--background-main);
+    font-family: sans-serif;
+}
+
+/* -----Navbar -------*/
+.navbar__ul {
+	margin: 0;
+	padding: 5px;
+	list-style-type: none;
+	text-align: center;
+	background-color: var(--primary);
+}
+
+.navbar__li {
+	display: inline;
+}
+
+.navbar__li > a {
+	text-decoration: none;
+	padding: 0.2rem 1rem;
+    margin: 2rem;
+	color: #fff;
+	background-color: var(--primary);
+    transition: 0.2s;
+    border-radius: 2px;
+}
+
+.navbar__li > a:hover {
+	color: var(--primary);
+	background-color: var(--background-main);
+    font-weight: 600;
+}
+
+/* -------- Comments -------*/
+.comments{
+    width: 80vw;
+    height: 50vh;
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: 0 0.2rem 0.5rem black;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.comments-placed{
+    width: 80%;
+    height: 50%;
+}
+
+.comments-form{
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.comments-form__input{
+    display: flex;
+    justify-content: center;
+	border: var(--secondary) 2px solid;
+	background: #E8E8E8;
+	border-radius: 1rem 1rem 0 0;
+    padding: 1rem;
+	transition: all 0.2s;
+	margin: 2rem 0;
+}
+
+.form-naam{
+    width: 40%;
+	height: 25%;
+	margin: 2rem 0;
+}
+
+.form-textarea{
+    width: 80%;
+	height: 50%;
+	margin: 2rem 0;
+}
+
+.test4{
+    display: flex;
+    justify-content: flex-end;
+    height: 25%;
+    margin-right: 20%;
+    float: right;
+}
+
+
+/* ------- HuisdierCards ----*/
+
+.huisdierCard::after{
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--primary);
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+}
+
+.huisdierCard{
+    width: 50vw;
+    height: 70vh;
+    margin: 0 auto;
+    box-shadow: 0 0.2rem 0.5rem black;
+    position: relative;
+}
+
+@media(max-width: 37.5rem){
+    .huisdierCard{
+        width: 35rem;
+    }
+}
+
+@media(max-width: 25rem){
+    .huisdierCard{
+        width: 20rem;
+    }
+}
+
+.huisdierCard__title{
+    width: 100%;
+    height: 5%;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.huisdierCard__figure{
+    width: 100%;
+    height: 55%;
+    padding: 1rem;
+}
+
+.huisdierCard__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.huisdierCard__text{
+    padding-left: 2rem;
+    height: 20%;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+}
+
+.huisdierCard__btnSection{
+    height: 20%;
+    padding-left: 2rem;
+}
+
+.huisdierCard__button{
+    font-size: 1.8rem;
+    width: 30rem;
+    height: 5rem;
+    box-sizing: border-box;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0.1rem 1rem var(--primary);
+}
+
+.huisdierCard__button:hover{
+    cursor: pointer;
+    box-shadow: 0 0.1rem 1.5rem var(--primary);
+}
+
+.huisdierCard__back_to_home{
+    display: block;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+    color: black;
+}
+
+/* ------ Defaults --------*/
+button:hover{
+    cursor: pointer;
+}
+
+
+/* ---------  Index ----------- */
+
+.huisdierGridCard{
+    grid-column: span 4;
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width: 56.25rem){
+    .huisdierGridCard{
+        grid-column: span 6;
+    }
+}
+
+@media(max-width: 32.5rem){
+    .huisdierGridCard{
+        grid-column: span 12;
+    }
+}
+
+.huisdierGridCard > a{
+    text-decoration: none;
+}
+
+.huisdierGridCard > a > article{
+    width: 100%;
+    height: 100%;
+}
+
+.huisdierGridCard__header{
+    width: 100%;
+    height: 20%;
+    background-color: var(--secondary);
+}
+
+.huisdierGridCard__figure{
+    width: 100%;
+    height: 60%;
+}
+
+.huisdierGridCard__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.huisdierGridCard__textSection{
+    width: 100%;
+    height: 20%;
+    background-color: var(--secondary);
+}
+
+/* ------------Create pagina-----------*/
+.create-form{
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 2rem black;
+    min-height: 70vh;
+    display: flex;
+    color: var(--primary);
+}
+
+.create-form__form{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.create-form__section{
+    margin-top: 2rem;
+    font-size: 140%;
+    width: 100%;
+}
+
+.create-form__input{
+    display: block;
+    margin-top: 1rem;
+    width: 60%;
+    font-size: 100%;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.create-form__input--big{
+    height: 20rem;
+    padding: 0;
+}
+
+.create-form__button{
+    font-size: 1.8rem;
+    width: 30rem;
+    height: 5rem;
+    box-sizing: border-box;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0.1rem 1rem var(--primary);
+    margin-bottom: 2rem;
+}
+
+.filter-section{
+    width: 100%;
+    color: white;
+    font-size: 200%;
+
+}
+
+.filter-section__wrapper{
+    margin-bottom: 2rem;
+}
+
+.filter-section__label{
+
+}
+
+.filter-section__input{
+    display: block;
+
+}
+
+@media (max-width:62.5rem) {
+    .create-form{
+        width: 90%;
+    }
+
+    .create-form__input{
+        width: 80%;
+    }
+}
+
+/* --------- Style for huisdier soort ------ */
+.huisdierGridCard[data-huisdier-soort="Hond"]::after{
+}
+
+/* ---------Utility classes ------- */
+.u-list-style-none{
+    list-style: none;
+}
+
+.u-grid-12{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+}
+
+.u-grid-gap-2{
+    gap: 2rem;
+}
+
+.u-grid-span-6{
+    grid-column: span 6;
+}
+
+.u-flex-v-center{
+    display: flex;
+    align-items: center;
+}
+
+/* ------Animations -------- */
+.a-popup{
+    animation-name: popup;
+    animation-duration: 0.5s;
+}
+
+@keyframes popup{
+    0%{
+        opacity: 0;
+        transform: scale(1.05) translateY(-1rem);
+    }
+    70%{
+        transform: scale(0.98);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ----- Login ---------*/
