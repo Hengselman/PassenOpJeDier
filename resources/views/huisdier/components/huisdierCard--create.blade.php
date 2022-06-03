@@ -1,6 +1,5 @@
-<h2>Voeg hier een nieuw huisdier toe!</h2>
 <article class="create-form">
-    <form class="create-form__form a-popup" action="/huisdier" method="POST">
+    <form class="create-form__form a-popup" action="/huisdier/{id}" method="POST">
         @csrf
 
         <section class="create-form__section">

@@ -14,10 +14,22 @@ class CommentSeeder extends Seeder
      */
     public function run()
     {
-        DB::table("comments")->insert([
-            'content' => 'Admin',
-            'user' => 'Devin',
-            'huisdier_id' => 1,
-        ]);
+            DB::table("comments")->insert([
+                'huisdier_id' => 1,
+                'content' => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut aliquid omnis reiciendis atque nesciunt deleniti dolore, soluta iste dignissimos, tempore sed, quam possimus ducimus nobis suscipit nam corporis eos odio!",
+                'user' => 'Devin',
+            ]);
+
+            DB::table("comments")->insert([
+                'huisdier_id' => 1,
+                'content' => "Test test test comment",
+                'user' => 'Devin',
+            ]);
+
+            DB::table("comments")->insert([
+                'huisdier_id' => 1,
+                'content' => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut aliquid omnis reiciendis atque nesciunt deleniti dolore, soluta iste dignissimos, tempore sed, quam possimus ducimus nobis suscipit nam corporis eos odio!",
+                'user' => 'Devin',
+            ]);
     }
 }

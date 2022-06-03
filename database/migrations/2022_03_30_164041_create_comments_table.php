@@ -14,11 +14,11 @@ class CreateCommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('huisdier_id');
             $table->string('content');
-            $table->string('user');
+            $table->string('user')->nullable();
             $table->foreign('user')->references('name')->on('users');
-            $table->integer('huisdier_id');
             $table->foreign('huisdier_id')->references('id')->on('huisdier');
             $table->timestamps();
         });
@@ -34,5 +34,7 @@ class CreateCommentsTable extends Migration
         Schema::table('comments', function (Blueprint $table) {
             $table->dropForeign('comments_user_foreign');
         });
+
+        Schema::dropIfExists('comments');
     }
 }

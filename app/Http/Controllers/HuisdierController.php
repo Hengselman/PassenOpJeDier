@@ -32,13 +32,14 @@ class HuisdierController extends Controller
         $huisdier->soort = $request->input('soort');
         $huisdier->description = $request->input('description');
         $huisdier->image = $request->input('image');
+        $huisdier->age = $request->input('age');
 
         try{
             $huisdier->save();
             return redirect('/');
         }
         catch(Exception $e){
-            return redirect('/huisdier/create');
+            return redirect('/huisdier');
         }
     }
 }

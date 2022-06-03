@@ -1,5 +1,5 @@
 <li class="a-popup u-list-style-none huisdierGridCard" data-huisdier-soort="{{$huisdier->soort}}">
-    <a href="/huisdier/{{$huisdier->id}}">
+    <a class="huisdierGridCard__link" href="/huisdier/{{$huisdier->id}}">
         <article>
             <header class="huisdierGridCard__header u-flex-v-center">
                 <h2 class="huisdierGridCard__heading"> {{$huisdier->name}}</h2>

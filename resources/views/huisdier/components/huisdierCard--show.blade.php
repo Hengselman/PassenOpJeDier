@@ -1,5 +1,6 @@
 <article class="huisdierCard a-popup">
     <h1 class="huisdierCard__title">{{$huisdier->name}}</h1>
+    <h3 class="huisdierCard__age">{{$huisdier->age}}</h3>
     <figure class="huisdierCard__figure">
         <img class="huisdierCard__image" src="{{$huisdier->image}}" alt="{{$huisdier->name . " " . $huisdier->soort}}">
     </figure>

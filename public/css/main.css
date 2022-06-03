@@ -25,15 +25,43 @@ body{
 
 /* -----Navbar -------*/
 .navbar__ul {
-	margin: 0;
-	padding: 5px;
+	margin: 1rem;
+	padding: 1rem;
 	list-style-type: none;
 	text-align: center;
 	background-color: var(--primary);
+    border-radius: 2rem;
+}
+
+.navbar{
+    padding: 0 1rem;
+}
+
+.navbar::before{
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 5.5rem;
+    left: 5rem;
+    background:#519259;
+    clip-path: circle(50.0% at 50% 50%);
+}
+
+.navbar::after{
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 5.5rem;
+    right: 5rem;
+    background:#519259;
+    clip-path: circle(50.0% at 50% 50%);
 }
 
 .navbar__li {
-	display: inline;
+	display: inline-block;
+    
 }
 
 .navbar__li > a {
@@ -58,21 +86,27 @@ body{
     height: 50vh;
     margin: 2rem auto;
     padding: 1rem;
-    box-shadow: 0 0.2rem 0.5rem black;
-    border-radius: 1rem;
     position: relative;
+    display: block;
 }
 
 .comments-placed{
-    width: 80%;
+    width: 100%;
     height: 50%;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    padding: 1rem;
 }
 
 .comments-form{
     width: 100%;
-    height: 40%;
-    border-radius: 10px;
-    padding: 20px;
+    height: auto;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    position: relative;
+    display: inline-block;
 }
 
 .comments-form__input{
@@ -88,7 +122,7 @@ body{
 
 .form-naam{
     width: 40%;
-	height: 25%;
+	height: 4rem;
 	margin: 2rem 0;
 }
 
@@ -122,10 +156,31 @@ body{
 
 .huisdierCard{
     width: 50vw;
-    height: 70vh;
+    height: auto;
     margin: 0 auto;
-    box-shadow: 0 0.2rem 0.5rem black;
+    border: 0.5rem solid var(--background-extra);
     position: relative;
+    background-color: rgba(240, 187, 98, 0.5);
+}
+
+@media(max-width: 912px){
+    .navbar__li{
+        margin-bottom: 1rem;
+    }
+
+    .navbar::before{
+        width: 4rem;
+        height: 4rem;
+        top: 6rem;
+        left: 4.5rem;
+    }
+
+    .navbar::after{
+        width: 4rem;
+        height: 4rem;
+        top: 6rem;
+        right: 4.5rem;
+    }
 }
 
 @media(max-width: 37.5rem){
@@ -143,8 +198,13 @@ body{
 .huisdierCard__title{
     width: 100%;
     height: 5%;
-    padding: 2rem;
+    padding: 1rem 0 0 2rem;
     margin-bottom: 1rem;
+}
+
+.huisdierCard__age{
+    padding: 0 0 2rem 2rem;
+    font-weight: 200;
 }
 
 .huisdierCard__figure{
@@ -165,6 +225,7 @@ body{
     color: var(--primary);
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .huisdierCard__btnSection{
@@ -217,7 +278,11 @@ button:hover{
     }
 }
 
-@media(max-width: 32.5rem){
+@media(max-width: 35rem){
+    .navbar__li{
+        display: block;
+    }
+
     .huisdierGridCard{
         grid-column: span 12;
     }
@@ -236,33 +301,45 @@ button:hover{
     width: 100%;
     height: 20%;
     background-color: var(--secondary);
+    padding-left: 1rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.huisdierGridCard__link{
+    color: black;
 }
 
 .huisdierGridCard__figure{
     width: 100%;
     height: 60%;
+    background-color: var(--secondary)
 }
 
 .huisdierGridCard__image{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    padding: 1rem;
 }
 
 .huisdierGridCard__textSection{
     width: 100%;
     height: 20%;
     background-color: var(--secondary);
+    padding: 1rem 1rem 5rem 1rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
 
 /* ------------Create pagina-----------*/
 .create-form{
-    width: 60%;
+    width: 50vw;
+    height: auto;
     margin: 0 auto;
-    box-shadow: 0 0.5rem 2rem black;
-    min-height: 70vh;
-    display: flex;
-    color: var(--primary);
+    border: 0.5rem solid var(--background-extra);
+    position: relative;
+    background-color: rgba(240, 187, 98, 0.5);
 }
 
 .create-form__form{
@@ -304,24 +381,26 @@ button:hover{
 }
 
 .filter-section{
-    width: 100%;
+    width: 80%;
     color: white;
-    font-size: 200%;
+    font-size: 100%;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    margin: 2rem auto;
+    background-color: #519259;
+    border: 0.5rem solid #F0BB62;
+    border-radius: 3rem;
 
 }
 
 .filter-section__wrapper{
-    margin-bottom: 2rem;
+    display: inline-block;
+    background-color: red;
+    margin: 1rem;
+    padding: 1rem;
 }
 
-.filter-section__label{
-
-}
-
-.filter-section__input{
-    display: block;
-
-}
 
 @media (max-width:62.5rem) {
     .create-form{
@@ -331,10 +410,6 @@ button:hover{
     .create-form__input{
         width: 80%;
     }
-}
-
-/* --------- Style for huisdier soort ------ */
-.huisdierGridCard[data-huisdier-soort="Hond"]::after{
 }
 
 /* ---------Utility classes ------- */

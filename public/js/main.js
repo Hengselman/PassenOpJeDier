@@ -9,6 +9,9 @@ var aa = document.getElementById("randomID")
 
 checkbox_hond.checked = true;
 checkbox_kater.checked = true;
+checkbox_slang.checked = true;
+checkbox_papegaai.checked = true;
+checkbox_cavia.checked = true;
 
 checkbox_hond.addEventListener("change", function(){
     if(checkbox_hond.checked){
@@ -38,6 +41,57 @@ checkbox_kater.addEventListener("change", function(){
     else{
         for(let i = 0; i < list_of_huisdier.length; i++){
             if (list_of_huisdier[i].dataset.huisdierSoort == "Kater"){
+                list_of_huisdier[i].style.display = "none";
+            }
+        }
+    }
+});
+
+checkbox_slang.addEventListener("change", function(){
+    if(checkbox_slang.checked){
+        for(let i = 0; i < list_of_huisdier.length; i++){
+            if (list_of_huisdier[i].dataset.huisdierSoort == "Slang"){
+                list_of_huisdier[i].style.display = "";
+            }
+        }
+    }
+    else{
+        for(let i = 0; i < list_of_huisdier.length; i++){
+            if (list_of_huisdier[i].dataset.huisdierSoort == "Slang"){
+                list_of_huisdier[i].style.display = "none";
+            }
+        }
+    }
+});
+
+checkbox_papegaai.addEventListener("change", function(){
+    if(checkbox_papegaai.checked){
+        for(let i = 0; i < list_of_huisdier.length; i++){
+            if (list_of_huisdier[i].dataset.huisdierSoort == "Papegaai"){
+                list_of_huisdier[i].style.display = "";
+            }
+        }
+    }
+    else{
+        for(let i = 0; i < list_of_huisdier.length; i++){
+            if (list_of_huisdier[i].dataset.huisdierSoort == "Papegaai"){
+                list_of_huisdier[i].style.display = "none";
+            }
+        }
+    }
+});
+
+checkbox_cavia.addEventListener("change", function(){
+    if(checkbox_cavia.checked){
+        for(let i = 0; i < list_of_huisdier.length; i++){
+            if (list_of_huisdier[i].dataset.huisdierSoort == "Cavia"){
+                list_of_huisdier[i].style.display = "";
+            }
+        }
+    }
+    else{
+        for(let i = 0; i < list_of_huisdier.length; i++){
+            if (list_of_huisdier[i].dataset.huisdierSoort == "Cavia"){
                 list_of_huisdier[i].style.display = "none";
             }
         }

@@ -16,12 +16,39 @@ class HuisdierPapegaaiTableSeeder extends Seeder
     {
         $papegaai_huisdier_array = ["Coco","Jinx","Eevee","Croky","Google"];
 
-        foreach($papegaai_huisdier_array as $papegaai){
-            DB::table("huisdier")->insert([
-                'name' => $papegaai,
-                'soort' => "Papegaai",
-                'description' => "Papegaaien zijn erg leuke huisdieren en zo is $papegaai echt een beestje wat bij je huis past."
-            ]);
-        }
+        DB::table("huisdier")->insert([
+            'name' => 'Coco',
+            'soort' => "Papegaai",
+            'image' => '/img/huisdier_papegaai_coco.jpg',
+            'description' => "Papegaaien zijn erg leuke huisdieren en zo is Coco echt een beestje wat bij je huis past."
+        ]);
+
+        DB::table("huisdier")->insert([
+            'name' => 'Jinx',
+            'soort' => "Papegaai",
+            'image' => '/img/huisdier_papegaai_jinx.jpg',
+            'description' => "Papegaaien zijn erg leuke huisdieren en zo is Jinx echt een beestje wat bij je huis past."
+        ]);
+
+        DB::table("huisdier")->insert([
+            'name' => 'Eevee',
+            'soort' => "Papegaai",
+            'image' => '/img/huisdier_papegaai_eevee.jpg',
+            'description' => "Papegaaien zijn erg leuke huisdieren en zo is Eevee echt een beestje wat bij je huis past."
+        ]);
+
+        DB::table("huisdier")->insert([
+            'name' => 'Croky',
+            'soort' => "Papegaai",
+            'image' => '/img/huisdier_papegaai_croky.jpg',
+            'description' => "Papegaaien zijn erg leuke huisdieren en zo is Croky echt een beestje wat bij je huis past."
+        ]);
+
+        DB::table("huisdier")->insert([
+            'name' => 'Google',
+            'soort' => "Papegaai",
+            'image' => '/img/huisdier_papegaai_google.jpg',
+            'description' => "Papegaaien zijn erg leuke huisdieren en zo is Google echt een beestje wat bij je huis past."
+        ]);
     }
 }
